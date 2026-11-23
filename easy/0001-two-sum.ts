@@ -1,13 +1,13 @@
 // 1. Two Sum
 // Difficulty: Easy
 // https://leetcode.com/problems/two-sum/
-// Runtime: 463 ms | Memory: 68.2 MB
+// Runtime: 98 ms | Memory: 62.5 MB
 
 function twoSum(nums: number[], target: number): number[] {
-  for (const [index, num] of nums.entries()) {
-    for (const [index2, num2] of nums.entries()) {
-      if (index === index2) continue
-      if (num + num2 === target) return [index, index2]
+  for (let x = 0; x < nums.length; x++) {
+    for (let y = 0; y < nums.length; y++) {
+      if (x === y) continue
+      if (nums[x]! + nums[y]! === target) return [x, y]
     }
   }
   return []
